@@ -1,0 +1,127 @@
+﻿<Window x:Class="Project_ICT_AO___Tijl_Van_Caneghem.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Project_ICT_AO___Tijl_Van_Caneghem"
+        mc:Ignorable="d"
+        Title="Project Tijl Van Caneghem" Width="600" SizeToContent="Height" Background="#FF464D5F" Closing="Window_Closing">
+    <StackPanel>
+        <GroupBox Header="MasterDimmer" Margin="50,10,50,0" Foreground="White" BorderBrush="Black">
+            <Slider 
+            Name="masterSlider" Margin="10"
+            Minimum="0" Maximum="255" 
+            TickFrequency="12.75" TickPlacement="Both"
+            IsSnapToTickEnabled="True"
+            Orientation="Horizontal" Height="38"
+            HorizontalAlignment="Center" VerticalAlignment="Top"
+            Value="245" Width="381">
+                <Slider.Background>
+                    <LinearGradientBrush EndPoint="0.5,1" MappingMode="RelativeToBoundingBox" StartPoint="0.5,0">
+                        <GradientStop Color="Black" Offset="1"></GradientStop>
+                        <GradientStop Color="White"></GradientStop>
+                    </LinearGradientBrush>
+                </Slider.Background>
+            </Slider>   
+        </GroupBox>
+
+        <Grid>
+            
+            <Button 
+            Name="btnOn" Content="ON" 
+            HorizontalAlignment="Center" VerticalAlignment="Top" 
+            Width="50" Height="50" 
+            Margin="-150,20,0,20" 
+            Click="btnOn_Click">
+
+            </Button>
+
+            <Button Name="btnOff" Content="OFF" 
+            HorizontalAlignment="Center" VerticalAlignment="Top" 
+            Width="50" Height="50" 
+            Margin="150,20,0,20" 
+            Click="btnOff_Click">
+
+            </Button>
+        </Grid>
+        <StackPanel Orientation="Horizontal">
+            <Slider 
+                x:Name="redSlider" Margin="150,0,50,0" 
+                Minimum="0" Maximum="255" 
+                TickFrequency="12.75" TickPlacement="Both"
+                IsSnapToTickEnabled="True"
+                HorizontalAlignment="Left" VerticalAlignment="center" 
+                Orientation="Vertical" Height="300" 
+                AutoToolTipPlacement="BottomRight" LargeChange="10" 
+                BorderBrush="Black" Foreground="Black" 
+                Value="255">
+
+                <Slider.Background>
+                    <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                        <GradientStop Color="White" Offset="1"/>
+                        <GradientStop Color="Red"/>
+                    </LinearGradientBrush>
+                </Slider.Background>
+              </Slider>
+
+            <Slider
+                x:Name="greenSlider" Margin="50,0,50,0" 
+                Minimum="0" Maximum="255" 
+                TickFrequency="12.75" TickPlacement="Both"
+                IsSnapToTickEnabled="True"
+                HorizontalAlignment="Center" VerticalAlignment="center" 
+                Orientation="Vertical" Height="300" 
+                AutoToolTipPlacement="BottomRight" LargeChange="10"
+                BorderBrush="Black" Foreground="Black"
+                Value="255">
+
+                <Slider.Background>
+                    <LinearGradientBrush EndPoint="0.5,1" MappingMode="RelativeToBoundingBox" StartPoint="0.5,0">
+                        <GradientStop Color="White" Offset="1"></GradientStop>
+                        <GradientStop Color="Green"></GradientStop>
+                    </LinearGradientBrush>
+                </Slider.Background>
+            </Slider>
+
+            <Slider
+                Name="blueSlider" Margin="50,0,100,0" 
+                Minimum="0" Maximum="255" 
+                TickFrequency="12.75" TickPlacement="Both"
+                IsSnapToTickEnabled="True"
+                HorizontalAlignment="Right" VerticalAlignment="center"
+                Orientation="Vertical" Height="300" 
+                AutoToolTipPlacement="BottomRight"  LargeChange="10"
+                BorderBrush="Black" Foreground="Black"
+                Value="255">
+
+                <Slider.Background>
+                    <LinearGradientBrush EndPoint="0.5,1" MappingMode="RelativeToBoundingBox" StartPoint="0.5,0">
+                        <GradientStop Color="White" Offset="1"></GradientStop>
+                        <GradientStop Color="Blue"></GradientStop>
+                    </LinearGradientBrush>
+                </Slider.Background>
+            </Slider>
+            
+        </StackPanel>
+
+                      
+
+        <Label Name="nameLabel" Content="Tijl Van Caneghem" 
+               HorizontalAlignment="Right" VerticalAlignment="Bottom"
+               Margin="10" FontStyle="Oblique" Foreground="#FFFFFCFC">
+
+        </Label>
+
+        <!--<Label Content="{Binding ElementName=masterSlider, Path=Value, UpdateSourceTrigger=PropertyChanged}" ContentStringFormat="{}{0}%}" HorizontalAlignment="Left" Margin="200,112,0,0" VerticalAlignment="Top" Height="25" Width="48" />-->
+
+
+        <!--<Label Name="masterSliderLabel" Content="" 
+               HorizontalAlignment="Left" VerticalAlignment="Top" 
+               Margin="42,43,0,0">
+            
+        </Label>-->
+
+
+
+    </StackPanel>
+</Window>
